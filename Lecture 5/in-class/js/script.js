@@ -146,9 +146,11 @@ console.log(displayMessage(peep));
 */
 
 // IMPORT A MODULE
+
 import {add} from "./modules/calculator.js";    //goes to the root. iN this case the /js/ folder
 console.log(add(100, 50));
 
 //OR
 
-// import * 
+// import * as calc from "./modules/calculator.js";
+// console.log(calc.add(100, 90));
