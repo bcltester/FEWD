@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event Phases Demo</title>
+</head>
+<body>
+	<div>
+		<button>Click Me</button>
+	</div> 
+	<script>
+		let phases = {1: "capture", 2: "target", 3: "bubble"};
+		
+		let body = document.querySelector('body');
+		let div = document.querySelector('div');
+		let button = document.querySelector('button');
+		
+		// Capture phase listeners (true)
+		// body.addEventListener('click', callback, true);
+		// div.addEventListener('click', callback, true);
+		// button.addEventListener('click', callback, true);
+		
+		// Capture phase listeners (false)
+		body.addEventListener('click', callback, false);
+		div.addEventListener('click', callback, false);
+		button.addEventListener('click', callback, false);
+		
+		function callback(e) {
+			let tag = e.currentTarget.tagName;
+			let phase = phases[e.eventPhase];
+			alert(`Tag: ${tag}\nEventPhase: ${phase}`);
+		}
+	</script>
+</body>
+</html>

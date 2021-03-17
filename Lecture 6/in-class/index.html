@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>Lab</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- EVENT DELEGATION -->
+    <div id="buttons">
+        <button id="btn1">Button 1</button>
+        <button id="btn2">Button 2</button>
+        <button id="btn3">Button 3</button>
+        <button id="btn4">Button 4</button>
+        <button id="btn5">Button 5</button>
+    </div>
+
+
+<!-- INLINE METHOD    
+    <button onclick="sayMessage('Hello World')">Click Me</button>  
+    <script>
+        function sayMessage(msg) {
+            alert(msg);
+        }
+    </script>
+-->    <!-- This is the old school way to handle it -->
+
+<!-- ELEMENT PROPERTY METHOD -->
+<!--    <button id="myButton">Click Me</button>
+    <script>
+        btn = document.getElementById("myButton");
+        btn.onclick = function () {
+            alert('You clicked the button.');
+        }
+        btn.ondblclick = function () {
+            alert('You double clicked on the button.');
+        }
+        btn.onblur = function () {
+            alert('You lost focus on the button.');
+        }
+    </script>
+-->
+
+<!-- EVENT LISTENER METHOD -->
+    <!-- <button id="myButton">Click me</button> -->
+
+<!--    <script>
+        // let btn = document.getElementById('myButton');
+        /* USING USER DEFINED FUNCTION */
+        // btn.addEventListener('click', writeMessage);
+
+        // function writeMessage () {
+        //     alert('Hello World');
+        // }
+
+        /* USING ANONYMOUS FUNCTION */
+        // btn.addEventListener('click', function () {
+        //     alert('Hello World 2');
+        // });
+
+        /* USING ARROW FUNCTION */
+        // btn.addEventListener('click', () => alert('Hello World 3'));        
+
+    </script>   -->
+
+    <!-- EVENT LISTENER, PASSING IN ARGUMENT E -->
+    <!-- <button id="myButton" class="blue">Click me</button> -->
+
+</body>
+
+</html>

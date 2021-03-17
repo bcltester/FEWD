@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default Behavior Demo</title>
+    <style>
+    #books img {
+        float: left;
+        margin: 10px; 
+    }
+    #cart {
+        min-height: 100px;
+        width: 275px;
+        border:3px dashed #ccc;
+        margin: 10px;
+        padding: 10px;
+        clear: left;
+    }
+    </style>
+</head>
+<body>
+    <div id="books">
+        <img src="images/book1.jpg" draggable="true" id="Dreamweaver CS4 Unleashed" alt="">
+        <img src="images/book2.jpg" draggable="true" id="10 Minute Guide to Dreamweaver 4" alt="">
+        <img src="images/book3.jpg" draggable="true" id="HTML5 and CSS3" alt="">
+        <img src="images/book4.jpg" draggable="true" id="Beginning Expression Web" alt="">
+        <img src="images/book5.jpg" draggable="true" id="Build your own ASP.NET Website using C# and VB" alt="">
+    </div>
+
+    <div id="cart" ondragover="return false">
+        <strong>Shopping Cart (Drag books here)</strong>
+    </div>
+
+    <input type="button" value="Checkout">
+
+    <script>
+        let book = document.getElementById('books');
+        let cart = document.getElementById('cart');
+
+        book.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('Text', e.target.id);
+        });
+
+        cart.addEventListener('drop', (e) => {
+            //e.preventDefault(); //Remove this in Firefox and see what happens
+            e.target.innerHTML += `<p>${e.dataTransfer.getData('Text')}</p>`;
+        });
+    </script>
+</body>
+</html>

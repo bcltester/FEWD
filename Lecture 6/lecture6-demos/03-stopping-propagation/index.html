@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stopping Propagation Demo</title>
+	<style>
+		#lightbox {
+			background: url('images/bg.jpg');
+			background-size: cover;
+			box-shadow: 0 0 15px black;
+			height: 500px;
+			width: 50%;
+			margin: 50px auto;
+			border:2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<a id="button"><img src="images/bg.jpg" style="width:200px;height:125px;border:3px solid black;"></a>
+	<div id="lightbox"></div>
+
+	<script>
+		let btn = document.getElementById('button');
+		let lightbox = document.getElementById('lightbox');
+
+		btn.addEventListener('click', () => document.location.reload());
+		lightbox.addEventListener('click', (e) => e.stopPropagation());
+		
+		// Remove the lightbox when a 'click' is heard on the document (<html>) element
+		document.addEventListener('click', () => {
+			lightbox.parentNode.removeChild(lightbox);
+		});
+	</script>
+</body>
+</html>
