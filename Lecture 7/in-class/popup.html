@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset-"utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Popup</title>
+</head>
+
+<body>
+    <!-- <button onclick="javascript:window.close()">Close Popup</button> -->
+    <button id="btnClose'">Close Popup</button>
+
+    <script src="js/script.js">
+        window.addEventListener('load', () => {
+            let width = 800;
+            let height = 600;
+            window.resizeTo(width, height);
+            window.moveTo((window.screen.width - width) / 2, (window.screen.height - height) / 2);
+
+            document.getElementById('btnClose').addEventListener('click', () => {
+                let output = window.opener.document.getElementById('details');
+                output.innerHTML = 'Hello World';
+                window.close();
+            });
+        });
+    </script>
+</body>
