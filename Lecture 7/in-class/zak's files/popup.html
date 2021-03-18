@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Popup</title>
+    <script>
+        window.addEventListener('load', () => {
+            let width = 800;
+            let height = 600;
+            window.resizeTo(width, height);
+            window.moveTo(((window.screen.width - width) / 2), ((window.screen.height - height) / 2));
+
+            document.getElementById('btnClose').addEventListener('click', () => {
+                let output = window.opener.document.getElementById('details');
+                output.innerHTML = 'Hello World';
+                window.close();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btnClose">Close Popup</button>
+</body>
+</html>
