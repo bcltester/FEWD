@@ -61,11 +61,12 @@ window.addEventListener('load', () => {
     //     window.open('http://www.mozilla.com', 'mozilla', 'width=600, height=600');        
     // });
 
-    // let btn = document.getElementById('btnClick');
-    // btn.addEventListener('click', () => {
-    //     window.open('popup.html', '', 'width=300, height=200');        
-    // });
+    let btn = document.getElementById('btnClick');
+    btn.addEventListener('click', () => {
+        window.open('popup.html', 'happy', 'width=300, height=200');        
+    });
 
+/*
     // WINDOW.SETTIMEOUT()
     function boo() {
         let output = document.getElementById('details');
@@ -74,4 +75,6 @@ window.addEventListener('load', () => {
     }
     // window.setTimeout(boo, 5000);       // 5 seconds
     window.setInterval(boo, 5000);  //calls function every 5 seconds. Like in a loop.
+
+    */
 });
