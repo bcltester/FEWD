@@ -59,15 +59,15 @@ let employees = ["Sally", "Zak", "Mark", "Fred", "Pepe", "Sue", "Zak"];
 // console.log(employees.sort());
 // console.log(employees.reverse());
 
-// let yearsWithCompany = [5, 7, 10, 12, 15, 20];
+let yearsWithCompany = [5, 7, 10, 12, 15, 20];
 
-// let seniority = yearsWithCompany.find((value, index, array) => {
-//     return value > 10;
-// });
+let seniority = yearsWithCompany.find((value, index, array) => {
+    return value > 10;
+});
 
 // let seniority = yearsWithCompany.find(() => true);  //my own test
 
-// console.log(seniority);
+console.log(seniority);
 
 // let newEmployeesArray = employees.concat(yearsWithCompany);
 
