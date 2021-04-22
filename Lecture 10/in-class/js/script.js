@@ -44,7 +44,7 @@ let zip = 'Your zip code is 92115-1115.';
 console.log(zip.match(/\d{5}(-\d{4})?/));
 */
 
-
+/*
 document.querySelector('#submit').addEventListener('click', () => {
     let zip = document.querySelector('#zip').value;
     let pattern = new RegExp(/\d{5}/g);
@@ -55,3 +55,17 @@ document.querySelector('#submit').addEventListener('click', () => {
         console.log("That is not valid.");
     }
 });
+*/
+
+let d = new Date();
+console.log(d.getDate());
+console.log(d.getDay());
+console.log(d.getFullYear());
+console.log(d.getHours());
+console.log(d.getMinutes());
+console.log(d.getSeconds());
+console.log(d.getMilliseconds());
+console.log(d.getMonth() + 1);
+console.log(d.toDateString());
+console.log(d.toString()); // not abbreviated version of .toDateString
+console.log(d.toTimeString()); // just the time piece
