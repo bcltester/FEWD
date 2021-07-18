@@ -18,7 +18,7 @@
 //     this._name = name;                  // Accessible via constructor
 //     this._breed = breed;                // Accessible via constructor                              
 //     this._color = color;                // Accessible via constructor
-//     _age = 0;                      // private
+//     let _age = 0;                      // private
 //     this.create = function() {
 //         console.log(`${this._name} the ${this._color} ${this._breed} has been created. He is now ${age()} years old.`);
 //     }
